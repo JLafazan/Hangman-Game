@@ -117,7 +117,7 @@ var html =
 
 document.querySelector("#LettersUsed").innerHTML = html;
 
-
+smallWin = 0
 
 
 
