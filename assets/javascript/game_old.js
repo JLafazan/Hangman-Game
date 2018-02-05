@@ -16,11 +16,10 @@ var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p",
   var lives ;             // Lives
   var counter ;           // Count correct geusses
   var space;              // Number of spaces in word '-'
-// var computerGuess = [ ];
-var lettersUsed = [ ];
+  // var computerGuess = [ ];
 var wins = 0;
-var gameOver = false;
-var smallWin = 0;
+var gameOver = false
+var smallWin = false
 var losses ;
 var GuessIndex = [ ];
 var spacers = ["-"];
@@ -36,6 +35,7 @@ var x = 0;
 // Start Game by hovering over picture
 
 function playhover() {
+
 
 // Set up the game board
 
@@ -69,6 +69,7 @@ var html =
 
 document.querySelector("#word2").innerHTML = html;
 
+
 console.log("badGuessLimit = " + badGuessLimit);
 
 console.log("computerGuess = " + computerGuess);
@@ -82,40 +83,18 @@ var html =
 
 document.querySelector("#word").innerHTML = html;
 
-
 //Determine if userGuess is a winner
 
-for (var h = 0; h < computerGuess.length; h++) {
+for (var h = 0; h < computerGuess.length-1; h++) {
 
 
-   if (userGuess === computerGuess[h]){
-    smallWin = smallWin+1;
-    totSpacers[h] = userGuess;
-
-var html =
-          "<p><strong>Your word is: " + totSpacers + "</strong></p>";
-
-document.querySelector("#word2").innerHTML = html;
-
+   if (userGuess = computerGuess[h]){
+    smallWin = true;
    }
-}
-  if (smallWin === 0) {
-badGuessLimit = badGuessLimit-1;
-var html =
-          "<p>" + badGuessLimit + "</p>";
-
-document.querySelector("#GeussesLeft").innerHTML = html;
-
+else 
+  smallWin = false;
 }
 
-// Update letters chosen 
-
-lettersUsed.push(userGuess)
-
-var html =
-          "<p>" + lettersUsed + "</p>";
-
-document.querySelector("#LettersUsed").innerHTML = html;
 
 
 
@@ -124,9 +103,18 @@ document.querySelector("#LettersUsed").innerHTML = html;
 
 
 
+// if smallWin = false {
+//   badGuessLimit = badGuessLimit-1;
+// }
 
 
 
+// if (badGuessLimit > 0){
+//   gameOver = false;
+// }
+// else
+//   gameOver = true;
+// // }
 
 
 
