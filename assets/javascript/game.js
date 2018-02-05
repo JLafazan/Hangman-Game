@@ -21,6 +21,7 @@ var lettersUsed = [ ];
 var wins = 0;
 var gameOver = false;
 var smallWin = 0;
+var bigWin = 0;
 var losses ;
 var GuessIndex = [ ];
 var spacers = ["-"];
@@ -90,6 +91,10 @@ for (var h = 0; h < computerGuess.length; h++) {
 
    if (userGuess === computerGuess[h]){
     smallWin = smallWin+1;
+
+if (smallWin > 0) {
+    bigWin = bigWin + 1;
+  }
     totSpacers[h] = userGuess;
 
 var html =
@@ -108,6 +113,19 @@ document.querySelector("#GeussesLeft").innerHTML = html;
 
 }
 
+if (computerGuess.length === bigWin) {
+
+wins = wins + 1
+
+var html =
+          "<p>Your have: " + wins + "</p>";
+
+document.querySelector("#wins").innerHTML = html;
+
+}
+
+
+
 // Update letters chosen 
 
 lettersUsed.push(userGuess)
@@ -117,9 +135,16 @@ var html =
 
 document.querySelector("#LettersUsed").innerHTML = html;
 
+
+
+console.log("smallWin = " + smallWin);
+
+// Reset smallWin in preparation for the next guess
 smallWin = 0
 
 
+console.log("winetypelength = " + winetype.length);
+console.log("bigWin = " + bigWin);
 
 
 
@@ -131,16 +156,17 @@ smallWin = 0
 
 
 console.log("userGuess3 = " + userGuess);
-console.log("winetypelength = " + winetype.length);
+
 console.log("computerGuess = " + computerGuess);
 console.log("computerGuesslength = " + computerGuess.length);
 console.log("totSpacers = " + totSpacers);
 console.log("smallWin = " + smallWin);
-console.log("badGuessLimit = " + badGuessLimit);
-console.log("gameOver = " + gameOver);
-}
-}
 
+console.log("wins = " + wins);
+console.log("badGuessLimit = " + badGuessLimit);
+
+}
+}
 
 
 
