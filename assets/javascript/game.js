@@ -87,7 +87,7 @@ var html =
 document.querySelector("#word").innerHTML = html;
 
 
-//Determine if userGuess is a winner
+//Determine if userGuess is a winner.
 
 for (var h = 0; h < computerGuess.length; h++) {
 
