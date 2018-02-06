@@ -81,7 +81,7 @@ p{
   font-size: 1.6em;
 }
 
-#alphabet {
+/*#alphabet {
   @include clear;
   margin:15px auto;
   padding:0;
@@ -106,9 +106,9 @@ p{
       border: solid 1px $white;
       color:$white;
     }
-}
+}*/
 
-#my-word {
+/*#my-word {
   margin: 0;
   display: block;
   padding: 0;
@@ -123,15 +123,15 @@ p{
   padding: 0 10px;
   font-size:1.6em;
 }
-
-.active {
+*/
+/*.active {
   @include opacity;
   cursor:default;
     
   &:hover{
       @include fade;
       @include opacity;
-    }
+    }*/
 }
 
 #mylives{
@@ -140,7 +140,7 @@ p{
   display:block;
 }
 
-button{
+/*button{
   @include corners (5px);
   background:$base-color;
   color:$white;
@@ -158,10 +158,10 @@ button{
       background:$white;
       border: solid 1px $white;
       color:$base-color;
-    }
+    }*/
 }
 
-@media (max-width: 767px) {
+/*@media (max-width: 767px) {
   #alphabet {
   padding:0 0 0 15px;
 }
@@ -171,4 +171,25 @@ button{
   #alphabet {
   padding:0 0 0 25px;
 }
+  }*/
+
+@media screen and (max-width: 980px) {
+  body {
+    background-color: red;
   }
+
+
+@media screen and (max-width: 768px) {
+  body {
+    background-color: green;
+  }
+
+@media screen and (max-width: 640px) {
+  body {
+    background-color: blue;
+  }
+
+
+
+
+  

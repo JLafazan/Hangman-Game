@@ -16,6 +16,7 @@ var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p",
   var lives ;             // Lives
   var counter ;           // Count correct geusses
   var space;              // Number of spaces in word '-'
+  var plusSpacers = ["_","_","_","_"]
 // var computerGuess = [ ];
 var lettersUsed = [ ];
 var wins = 0;
@@ -64,11 +65,13 @@ for (var j = 0; j < computerGuess.length-1; j++) {
 
 totSpacers.push("-")
 }
+    var cleanSpacers = totSpacers.join(" ");
 
 var html =
-          "<p><strong>Your word is: " + totSpacers + "</strong></p>";
+          "<p><strong>Your word is: " + cleanSpacers + "</strong></p>";
 
 document.querySelector("#word2").innerHTML = html;
+
 
 console.log("badGuessLimit = " + badGuessLimit);
 
@@ -97,8 +100,10 @@ if (smallWin > 0) {
   }
     totSpacers[h] = userGuess;
 
+var cleanSpacers = totSpacers.join(" ");
+
 var html =
-          "<p><strong>Your word is: " + totSpacers + "</strong></p>";
+          "<p><strong>Your word is: " + cleanSpacers + "</strong></p>";
 
 document.querySelector("#word2").innerHTML = html;
 
@@ -164,7 +169,7 @@ console.log("smallWin = " + smallWin);
 
 console.log("wins = " + wins);
 console.log("badGuessLimit = " + badGuessLimit);
-
+console.log("cleanSpacers = " + cleanSpacers);
 }
 }
 
