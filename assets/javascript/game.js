@@ -116,6 +116,11 @@ var html =
 
 document.querySelector("#GeussesLeft").innerHTML = html;
 
+if (badGuessLimit < 1) {
+  alert('GAME OVER');
+}
+
+
 }
 
 if (computerGuess.length === bigWin) {
