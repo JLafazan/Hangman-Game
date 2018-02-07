@@ -42,7 +42,7 @@ function playhover() {
 // Set up the game board
 
 var html =
-          "<p>Your have: " + wins + "</p>";
+          "<p>You have: " + wins + "</p>";
 
 document.querySelector("#wins").innerHTML = html;
 
